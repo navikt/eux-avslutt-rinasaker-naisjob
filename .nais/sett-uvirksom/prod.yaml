@@ -1,0 +1,11 @@
+name: eux-avslutt-rinasaker-sett-uvirksom-naisjob
+schedule: "0 1 * * *"
+
+prosess: til-sett-uvirksom
+
+application:
+  eux-avslutt-rinasaker:
+    name: eux-avslutt-rinasaker
+    namespace: eessibasis
+    endpoint: http://eux-avslutt-rinasaker
+    scope: api://prod-gcp.eessibasis.eux-avslutt-rinasaker/.default

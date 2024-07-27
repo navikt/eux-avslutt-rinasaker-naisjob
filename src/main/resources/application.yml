@@ -1,0 +1,9 @@
+prosess: ${prosess}
+
+spring:
+  main:
+    web-application-type: none
+    banner-mode: "off"
+
+endpoint:
+  eux-avslutt-rinasaker: ${CLIENT_EUX_AVSLUTT_RINASAKER_ENDPOINT}
