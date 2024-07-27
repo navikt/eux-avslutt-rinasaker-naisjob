@@ -37,6 +37,5 @@ class EuxAvsluttRinasakerClient(
                 else -> throw e
             }
         }
-
     }
 }
