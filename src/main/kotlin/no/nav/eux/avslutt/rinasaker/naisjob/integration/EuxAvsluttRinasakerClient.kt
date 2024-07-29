@@ -21,7 +21,7 @@ class EuxAvsluttRinasakerClient(
 
     fun execute() {
         log.info { "execute: $prosess" }
-        val uri = "${euxAvsluttRinasakerUrl}/api/v1/prosess/$prosess/execute"
+        val uri = "${euxAvsluttRinasakerUrl}/api/v1/prosesser/$prosess/execute"
         try {
             RestClient
                 .create()
