@@ -130,5 +130,5 @@ jobs:
           CLUSTER: dev-gcp
           RESOURCE: .nais/nais.yaml
           VAR: image=${{ needs.build.outputs.docker-image }}
-          VARS: ".nais/til-avslutning/q2.yaml,.nais/til-avslutning/q2.yaml"
+          VARS: ".nais/til-avslutning/q2.yaml .nais/til-avslutning/q2.yaml"
           PRINT_PAYLOAD: true
