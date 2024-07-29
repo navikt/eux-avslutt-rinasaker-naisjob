@@ -1,5 +1,5 @@
 name: eux-avslutt-rinasaker-arkiver-naisjob-q2
-schedule: "* * * * *"
+schedule: "0 5 * * *"
 
 prosess: arkiver
 
