@@ -1,0 +1,11 @@
+name: eux-avslutt-rinasaker-til-arkivering-naisjob-q1
+schedule: "0 4 * * *"
+
+prosess: til-arkivering
+
+application:
+  eux-avslutt-rinasaker:
+    name: eux-avslutt-rinasaker-q1
+    namespace: eessibasis
+    endpoint: http://eux-avslutt-rinasaker-q1
+    scope: api://dev-gcp.eessibasis.eux-avslutt-rinasaker-q1/.default

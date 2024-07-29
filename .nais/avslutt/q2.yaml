@@ -1,7 +1,7 @@
-name: eux-avslutt-rinasaker-til-avslutning-naisjob-q2
-schedule: "0 2 * * *"
+name: eux-avslutt-rinasaker-avslutt-naisjob-q2
+schedule: "0 3 * * *"
 
-prosess: til-avslutning
+prosess: avslutt
 
 application:
   eux-avslutt-rinasaker:

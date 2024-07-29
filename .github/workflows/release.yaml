@@ -132,3 +132,93 @@ jobs:
           VAR: image=${{ needs.build.outputs.docker-image }}
           VARS: .nais/til-avslutning/q2.yaml
           PRINT_PAYLOAD: true
+
+  deploy-til-arkivering-q1:
+    name: 'Deploy til-arkivering to q1'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q1'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/til-arkivering/q1.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-til-arkivering-q2:
+    name: 'Deploy til-arkivering to q2'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q2'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/til-arkivering/q2.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-avslutt-q1:
+    name: 'Deploy avslutt to q1'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q1'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/avslutt/q1.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-avslutt-q2:
+    name: 'Deploy avslutt to q2'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q2'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/avslutt/q2.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-arkiver-q1:
+    name: 'Deploy arkiver to q1'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q1'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/arkiver/q1.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-arkiver-q2:
+    name: 'Deploy arkiver to q2'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q2'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/arkiver/q2.yaml
+          PRINT_PAYLOAD: true

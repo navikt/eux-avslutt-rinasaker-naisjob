@@ -1,0 +1,11 @@
+name: eux-avslutt-rinasaker-arkiver-naisjob
+schedule: "0 2 * * *"
+
+prosess: arkiver
+
+application:
+  eux-avslutt-rinasaker:
+    name: eux-avslutt-rinasaker
+    namespace: eessibasis
+    endpoint: http://eux-avslutt-rinasaker
+    scope: api://prod-gcp.eessibasis.eux-avslutt-rinasaker/.default
