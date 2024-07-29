@@ -102,3 +102,33 @@ jobs:
           VAR: image=${{ needs.build.outputs.docker-image }}
           VARS: .nais/sett-uvirksom/q2.yaml
           PRINT_PAYLOAD: true
+
+  deploy-til-avslutning-q1:
+    name: 'Deploy til-avslutning to q1'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q1'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/til-avslutning/q1.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-til-avslutning-q2:
+    name: 'Deploy til-avslutning to q2'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for q2'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: ".nais/til-avslutning/q2.yaml,.nais/til-avslutning/q2.yaml"
+          PRINT_PAYLOAD: true

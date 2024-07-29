@@ -1,0 +1,6 @@
+application:
+  eux-avslutt-rinasaker:
+    name: eux-avslutt-rinasaker-q2
+    namespace: eessibasis
+    endpoint: http://eux-avslutt-rinasaker-q2
+    scope: api://dev-gcp.eessibasis.eux-avslutt-rinasaker-q2/.default
