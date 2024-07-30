@@ -1,7 +1,7 @@
 name: eux-avslutt-rinasaker-sett-uvirksom-naisjob-q1
 schedule: "0 1 * * *"
 
-prosess: til-sett-uvirksom
+prosess: sett-uvirksom
 
 application:
   eux-avslutt-rinasaker:

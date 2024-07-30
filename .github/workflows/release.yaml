@@ -222,3 +222,48 @@ jobs:
           VAR: image=${{ needs.build.outputs.docker-image }}
           VARS: .nais/arkiver/q2.yaml
           PRINT_PAYLOAD: true
+
+  deploy-sett-uvirksom-prod:
+    name: 'Deploy sett-uvirksom to prod'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for prod'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: prod-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/sett-uvirksom/prod.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-til-avslutning-prod:
+    name: 'Deploy til-avslutning to prod'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for prod'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: prod-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/til-avslutning/prod.yaml
+          PRINT_PAYLOAD: true
+          
+  deploy-til-arkivering-prod:
+    name: 'Deploy til-arkivering to prod'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for prod'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: prod-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/til-arkivering/prod.yaml
+          PRINT_PAYLOAD: true
