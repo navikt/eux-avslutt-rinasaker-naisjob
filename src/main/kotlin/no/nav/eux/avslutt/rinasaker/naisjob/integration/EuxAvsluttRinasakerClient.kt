@@ -31,11 +31,8 @@ class EuxAvsluttRinasakerClient(
                 .accept(MediaType.ALL)
                 .retrieve()
                 .toBodilessEntity()
-        } catch (e: HttpServerErrorException) {
-            when (e.statusCode) {
-                GATEWAY_TIMEOUT -> log.info { "Timeout mot server, venter ikke på svar" }
-                else -> throw e
-            }
+        } catch (e: Exception) {
+            log.warn { "eksekvering av $prosess returnerte ikke ok, sjekk manuelt om det gikk bra, restart er manuell" }
         }
     }
 }
