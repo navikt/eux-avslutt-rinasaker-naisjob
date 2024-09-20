@@ -1,5 +1,5 @@
 name: eux-avslutt-rinasaker-til-avslutning-naisjob
-schedule: "0 0 31 12 *"
+schedule: "0 2 * * *"
 
 prosess: til-avslutning
 

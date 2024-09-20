@@ -1,5 +1,5 @@
 name: eux-avslutt-rinasaker-sett-uvirksom-naisjob
-schedule: "0 0 31 12 *"
+schedule: "0 1 * * *"
 
 prosess: sett-uvirksom
 
