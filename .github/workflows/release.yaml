@@ -267,3 +267,33 @@ jobs:
           VAR: image=${{ needs.build.outputs.docker-image }}
           VARS: .nais/til-arkivering/prod.yaml
           PRINT_PAYLOAD: true
+
+  deploy-avslutt-prod:
+    name: 'Deploy avslutt to prod'
+    runs-on: ubuntu-latest
+    needs: [build, deploy-avslutt-q1, deploy-avslutt-q2]
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for prod'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: prod-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/avslutt/prod.yaml
+          PRINT_PAYLOAD: true
+
+  deploy-arkiver-prod:
+    name: 'Deploy avslutt to prod'
+    runs-on: ubuntu-latest
+    needs: [build, deploy-arkiver-q1, deploy-arkiver-q2]
+    steps:
+      - uses: actions/checkout@v4
+      - name: 'Calling nais deploy action for prod'
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: prod-gcp
+          RESOURCE: .nais/nais.yaml
+          VAR: image=${{ needs.build.outputs.docker-image }}
+          VARS: .nais/arkiver/prod.yaml
+          PRINT_PAYLOAD: true
