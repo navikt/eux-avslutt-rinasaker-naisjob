@@ -1,4 +1,4 @@
-name: eux-avslutt-rinasaker-slett-dokumentutkast-naisjob-q2
+name: eux-avslutt-rinasaker-slett-dok-utkast-naisjob-q2
 schedule: "0 0 1 6 *"
 
 prosess: slett-dokumentutkast
