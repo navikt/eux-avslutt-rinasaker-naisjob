@@ -1,5 +1,5 @@
 name: eux-avslutt-rinasaker-slett-dok-utkast-naisjob
-schedule: "25 14 * * *"
+schedule: "30 14 * * *"
 
 prosess: slett-dokumentutkast
 
