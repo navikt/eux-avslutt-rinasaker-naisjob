@@ -1,0 +1,11 @@
+name: eux-slett-dokumentutkast-naisjob
+schedule: "0 0 1 6 *"
+
+prosess: slett-dokumentutkast
+
+application:
+  eux-avslutt-rinasaker:
+    name: eux-avslutt-rinasaker
+    namespace: eessibasis
+    endpoint: http://eux-avslutt-rinasaker
+    scope: api://prod-gcp.eessibasis.eux-avslutt-rinasaker/.default
