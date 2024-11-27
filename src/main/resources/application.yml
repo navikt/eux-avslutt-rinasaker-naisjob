@@ -7,3 +7,8 @@ spring:
 
 endpoint:
   eux-avslutt-rinasaker: ${CLIENT_EUX_AVSLUTT_RINASAKER_ENDPOINT}
+
+logging:
+  structured:
+    format:
+      console: logstash
