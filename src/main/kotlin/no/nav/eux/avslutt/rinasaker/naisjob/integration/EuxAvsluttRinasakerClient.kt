@@ -9,9 +9,9 @@ import org.springframework.web.client.RestClient
 
 @Component
 class EuxAvsluttRinasakerClient(
-    @Value("\${prosess}")
+    @param:Value("\${prosess}")
     val prosess: String,
-    @Value("\${endpoint.eux-avslutt-rinasaker}")
+    @param:Value("\${endpoint.eux-avslutt-rinasaker}")
     val euxAvsluttRinasakerUrl: String,
 ) {
 
