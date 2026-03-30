@@ -1,5 +1,5 @@
 name: eux-avslutt-rinasaker-rapport-naisjob-q2
-schedule: "0 6 1 * *"
+schedule: "30 11 30 3 *"
 
 prosess: rapport
 
