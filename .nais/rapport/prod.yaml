@@ -1,0 +1,11 @@
+name: eux-avslutt-rinasaker-rapport-naisjob
+schedule: "5 0 1 * *"
+
+prosess: rapport
+
+application:
+  eux-avslutt-rinasaker:
+    name: eux-avslutt-rinasaker
+    namespace: eessibasis
+    endpoint: http://eux-avslutt-rinasaker
+    scope: api://prod-gcp.eessibasis.eux-avslutt-rinasaker/.default
