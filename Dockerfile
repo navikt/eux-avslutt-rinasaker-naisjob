@@ -1,3 +1,3 @@
-FROM cgr.dev/chainguard/jre:openjdk-25
+FROM europe-north1-docker.pkg.dev/cgr-nav/pull-through/nav.no/jre:openjdk-25
 COPY target/eux-avslutt-rinasaker-naisjob.jar /app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
